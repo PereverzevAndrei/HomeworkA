@@ -29,8 +29,7 @@ public class MagicBox<T> {
         int randomInt;
         for (int i = 0; i < capacity; i++) {
             if (magicBox[i] == null) {
-                System.out.println("Коробка не полна, осталось заполнить " + (capacity - i) + " ячеек");
-                return;
+                throw new RuntimeException("Коробка не полна, осталось заполнить " + (capacity - i) + " ячеек");
             }
         }
         Random random = new Random();
